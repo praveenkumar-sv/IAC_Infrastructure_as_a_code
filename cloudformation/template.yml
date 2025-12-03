@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create a basic S3 bucket with an explicit name
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: 'praveen-bucket-sample-09-2024'
+    DeletionPolicy: Delete
+
+Outputs:
+  BucketName:
+    Description: The name of the created S3 bucket
+    Value: !Ref MyS3Bucket
